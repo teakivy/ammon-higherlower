@@ -1,0 +1,13 @@
+.dropdown-item {
+	background-color: white;
+	padding: 7px;
+	border-radius: 12px;
+	font-size: 1.12em;
+	font-family: NunitoBold;
+	transition: 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+.dropdown-item:hover {
+	background-color: #f2f2f2;
+}

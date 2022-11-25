@@ -15,7 +15,7 @@ function Chip(props: ChipProps) {
 
 	return (
 		<div
-			className={`chip ${className} ${
+			className={`chip unselectable ${className} ${
 				onClick !== undefined ? "cursor-pointer" : ""
 			}`}
 			onClick={onClick}

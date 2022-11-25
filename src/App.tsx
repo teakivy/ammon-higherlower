@@ -7,10 +7,26 @@ const logo = {
 	desktop: desktopLogo,
 };
 
+export enum Scene {
+	Menu,
+	InGame,
+	GameOver,
+}
+
 function App() {
+	const [scene, setScene] = useState(Scene.Menu);
 	return (
 		<div className="App">
-			<MenuScreen />
+			{(() => {
+				switch (scene) {
+					case Scene.Menu:
+						return <MenuScreen changeScene={setScene} />;
+					case Scene.InGame:
+						return null;
+					case Scene.GameOver:
+						return null;
+				}
+			})()}
 		</div>
 	);
 }

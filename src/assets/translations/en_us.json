@@ -4,7 +4,14 @@
 		"play": "Play",
 		"credits": "Created with ❤️ by {author}",
 		"editions": {
-			"youtube": "YouTube Edition"
+			"youtube": "YouTube Edition",
+			"x": "X Edition",
+			"y": "Y Edition"
+		},
+		"avaliableEditions": ["youtube", "x", "y"],
+		"author": {
+			"name": "@TeakIvyYT",
+			"url": "https://twitter.com/TeakIvyYT"
 		}
 	}
 }
