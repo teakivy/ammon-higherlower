@@ -1,0 +1,175 @@
+.menu-screen {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	background: rgb(243, 205, 77);
+	background: linear-gradient(
+		128deg,
+		rgba(243, 205, 77, 1) 22%,
+		rgba(230, 152, 16, 1) 75%
+	);
+}
+
+.menu-screen .menu-screen-container {
+	margin: 30px;
+	width: calc(100vw - 60px);
+	height: calc(100vh - 60px);
+}
+
+.menu-screen .menu-options-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/* background-color: red; */
+	float: top;
+}
+
+.menu-screen .menu-title-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/* background-color: blue; */
+}
+
+.menu-screen .highscore-container {
+	/* background-color: green; */
+	flex: 1;
+}
+
+.menu-screen .higher-lower-title {
+	height: 280px;
+	position: absolute;
+	top: 14%;
+	transition: transform 0.2s ease-in-out;
+}
+
+.menu-screen .roblox-title {
+	width: 180px;
+	position: absolute;
+	top: calc(14% + 280px - 60px);
+	margin-left: 320px;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: bounce;
+	animation-name: bounce;
+	/* play infinitely */
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.1));
+}
+
+@keyframes bounce {
+	0% {
+		transform: scale(1) translateY(0);
+	}
+	50% {
+		transform: scale(1.1) translateY(-5px);
+	}
+	100% {
+		transform: scale(1) translateY(0);
+	}
+}
+
+.menu-screen .higher-lower-title:hover {
+	/* rotate random either -10deg or 10deg */
+	transform: rotate(5deg);
+}
+
+.menu-screen .menu-play-container {
+	margin-top: calc(14vh + 280px - 60px + 10vh);
+	/* background-color: yellow; */
+	flex: 1;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.menu-screen .menu-play-container .play-button {
+	height: 100px;
+	width: 300px;
+	border: white 9px solid;
+	background-color: transparent;
+	border-radius: 100px;
+	color: white;
+	font-size: 2.8em;
+	font-family: Feather;
+	vertical-align: middle;
+	box-shadow: var(--button-shadow), inset var(--button-shadow);
+	transition: 0.2s ease-in-out;
+}
+
+.menu-screen .menu-play-container .play-button .play-text {
+	margin-top: -16px;
+	text-shadow: 2px 2px 8px #1c1e277a;
+}
+
+.menu-screen .menu-play-container .play-button:hover {
+	transform: translateY(-4px);
+	background-color: white;
+	box-shadow: var(--button-shadow);
+	color: black;
+	text-shadow: none;
+}
+
+.menu-screen .menu-footer-container {
+	position: fixed;
+	bottom: 30px;
+	display: flex;
+	/* background-color: purple; */
+	z-index: 10;
+}
+
+.menu-screen .menu-credits-container {
+	position: fixed;
+	bottom: 30px;
+	display: flex;
+	/* background-color: purple; */
+	width: calc(100% - 60px);
+	justify-content: center;
+	text-shadow: 2px 2px 8px #1c1e277a;
+	font-family: NunitoBold;
+	font-size: 1.2em;
+	z-index: 0;
+}
+
+.menu-screen .menu-credits-container .url {
+	font-family: NunitoBlack;
+	font-size: 1.2em;
+	color: #535bf2;
+}
+.menu-screen .menu-credits-container .url:hover {
+	transition: translateY(-5px);
+}
+
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+}
+
+.hover-underline-animation:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 3px;
+	bottom: -11px;
+	left: 0;
+	background-color: #535bf2;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+	z-index: -1;
+}
+
+.hover-underline-animation:hover:after {
+	transform: scaleX(1) translateY(-8px);
+	transform-origin: bottom left;
+}

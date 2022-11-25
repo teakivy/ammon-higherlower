@@ -1,0 +1,10 @@
+{
+	"menu": {
+		"high_score": "High Score: {score}",
+		"play": "Play",
+		"credits": "Created with ❤️ by {author}",
+		"editions": {
+			"youtube": "YouTube Edition"
+		}
+	}
+}
